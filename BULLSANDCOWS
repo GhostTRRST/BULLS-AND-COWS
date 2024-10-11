@@ -1,0 +1,10 @@
+
+#GateMaster must select a three digit code without duplicates
+#KeyMaster has 10 tries total
+
+Tries = 10
+Guess = False
+
+while Guess:
+    gateMaster = input("Input a random three digit number, NO DUPLICATES : ")
+    

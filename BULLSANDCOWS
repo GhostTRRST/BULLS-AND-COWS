@@ -1,10 +1,17 @@
-
+import random
 #GateMaster must select a three digit code without duplicates
 #KeyMaster has 10 tries total
+Input1 = random.randint(0, 9)
+Input2 = random.randint(0, 9)
+Input3 = random.randint(0, 9)
 
 Tries = 10
 Guess = False
 
-while Guess:
-    gateMaster = input("Input a random three digit number, NO DUPLICATES : ")
+if Input1 == Input2 or Input2 == Input3 or Input1 == Input3:
+    Input1 = random.randint(0, 9)
+    Input2 = random.randint(0, 9)
+    Input3 = random.randint(0, 9)
+    
+
     

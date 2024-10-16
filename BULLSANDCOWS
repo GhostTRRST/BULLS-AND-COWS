@@ -5,13 +5,24 @@ Input1 = random.randint(0, 9)
 Input2 = random.randint(0, 9)
 Input3 = random.randint(0, 9)
 
-Tries = 10
-Guess = False
+Tries = 0
+Victory = False
+def duplicate(): True
+Input1 = random.randint(0, 9)  
+Input2 = random.randint(0, 9)
+Input3 = random.randint(0, 9)
 
 if Input1 == Input2 or Input2 == Input3 or Input1 == Input3:
-    Input1 = random.randint(0, 9)
-    Input2 = random.randint(0, 9)
-    Input3 = random.randint(0, 9)
-    
+    duplicate = True
 
-    
+
+#while Victory is False:
+   # Guess1 = input("Please guess the first digit : ")
+   # if Guess1 == Input1:
+       
+   # elif Guess1 == Input2:
+     
+   # elif Guess1 == Input3:
+  
+
+print(Input1, Input2, Input3)

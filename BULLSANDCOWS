@@ -1,28 +1,45 @@
 import random
-#GateMaster must select a three digit code without duplicates
-#KeyMaster has 10 tries total
-Input1 = random.randint(0, 9)
-Input2 = random.randint(0, 9)
-Input3 = random.randint(0, 9)
+# Generates 3 seperate random digits
+Input1 = str(random.randint(0, 9))
+Input2 = str(random.randint(0, 9))
+Input3 = str(random.randint(0, 9))
+# Variables
+Bulls = 0
+Cows = 0
+nWin = True
+Tries = 10
+while nWin:
+    Guess1 = input("Please guess the first digit in the number : ")
+    Guess2 = input("Please guess the second digit in the number : ")
+    Guess3 = input("Please guess the third digit in the number : ")
 
-Tries = 0
-Victory = False
-def duplicate(): True
-Input1 = random.randint(0, 9)  
-Input2 = random.randint(0, 9)
-Input3 = random.randint(0, 9)
+    if Guess1 == Input1 and Guess2 == Input2 and Guess3 == Input3:
+        print("""You guessed all three digits of the number correctly!
+        You Win!!!""")
+        nWin = False
+    else:
+        Bulls = 0
+        Cows = 0
+    
+    if Guess1[0] == Input1[0]:
+        Bulls += 1
+    elif Guess2[0] == Input2[0]:
+        Bulls += 1
+    elif Guess3[0] == Input3[0]:
+        Bulls += 1
+    elif Guess1[0] or Guess3[0] == Input2[0]:
+        Cows += 1
+    elif Guess2[0] or Guess3[0] == Input1[0]:
+        Cows += 1
+    elif Guess1[0] or Guess2[0] == Input3[0]:
+        Cows += 1
 
-if Input1 == Input2 or Input2 == Input3 or Input1 == Input3:
-    duplicate = True
+    
+    print(f"You have {Bulls} bulls")
+    print(f"You have {Cows} cows")
 
+    Tries -= 1
 
-#while Victory is False:
-   # Guess1 = input("Please guess the first digit : ")
-   # if Guess1 == Input1:
-       
-   # elif Guess1 == Input2:
-     
-   # elif Guess1 == Input3:
-  
-
-print(Input1, Input2, Input3)
+    if Tries < 1:
+        print("You have no more tries remaining")
+        nWin = False

@@ -4,6 +4,20 @@ Input1 = str(random.randint(100, 999))
 print("""You must guess the three digit number to win!
 You have ten tries to get the correct answer! Good luck!""")
 print()
+
+if Input1[0] == Input1[1]:
+    Input1 = str(random.randint(100, 999))
+if Input1[0] == Input1[2]:
+    Input1 = str(random.randint(100, 999))
+if Input1[1] == Input1[0]:
+    Input1 = str(random.randint(100, 999))
+if Input1[1] == Input1[2]:
+    Input1 = str(random.randint(100, 999))
+if Input1[2] == Input1[0]:
+    Input1 = str(random.randint(100, 999))
+if Input1[2] == Input1[1]:
+    Input1 = str(random.randint(100, 999))
+print(Input1)
 # Variables
 nWin = True
 Tries = 10
@@ -12,10 +26,10 @@ Cows = 0
 while nWin:
     Guess1 = input("Please guess the three digit number : ")
     
-
+    print()
     if Guess1 == Input1:
         print("""You guessed all three digits of the number correctly!
-        You Win!!!""")
+You Win, congratulations!!!""")
         nWin = False
     else:
         Bulls = 0
@@ -42,6 +56,7 @@ while nWin:
 
     print(f"You have {Bulls} bulls")
     print(f"You have {Cows} cows")
+    print(f"You have {Tries} tries left")
 
     Tries -= 1
 

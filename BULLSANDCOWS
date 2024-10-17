@@ -1,9 +1,9 @@
-''' project: Bulls and Cows.py
+""" project: Bulls and Cows.py
     author: Jaydriel Montes Connolly <jmontes-connolly2709545@woonsocketschools.com>
-    date written: 10/9/2024
+    date written: 10/15/2024
 
     description: Bulls and Cows!
-'''
+"""
 import random
 # Generates a random three digit number and converts it into a string
 Input1 = str(random.randint(100, 999))

@@ -24,7 +24,7 @@ if Input1[2] == Input1[0]:
     Input1 = str(random.randint(100, 999))
 if Input1[2] == Input1[1]:
     Input1 = str(random.randint(100, 999))
-print(Input1)
+
 # Variables
 nWin = True
 Tries = 10

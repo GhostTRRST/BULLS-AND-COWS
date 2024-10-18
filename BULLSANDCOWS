@@ -76,7 +76,4 @@ You Win, congratulations!!!""")
         print("You have no more tries remaining :(")
         nWin = False
 
-    if Tries < 1:
-        print("You have no more tries remaining :(")
-        nWin = False
-
+ 
